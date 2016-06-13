@@ -19,7 +19,7 @@ public class Client_MainRun {
 		} 
 		System.out.println(_ia.getHostName());
 		System.out.println(_ia.getHostAddress());
-		System.out.println("Á¢¼Ó¿¡ ¼º°øÇÏ¿´½À´Ï´Ù. Ã¤ÆÃÀ» ½ÃÀÛÇÕ´Ï´Ù.");
+		System.out.println("ì´ê²Œë²•ë‹ˆê¹Œ");
 		int _userPort = 60600;
 		String _clientData = null;
 		Socket socket = null;
@@ -36,7 +36,7 @@ public class Client_MainRun {
 			socket.connect(new InetSocketAddress(_serverIP, _serverPort));
 			_is = socket.getInputStream();
 			_serverData = new String(_bytes, 0, _is.read(_bytes));
-			System.out.println("¼­¹ö¿¡¼­ ¹ŞÀº °ª : " + _serverData);
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ : " + _serverData);
 			do{
 				_clientData = sc.nextLine();
 				_os = socket.getOutputStream();
@@ -46,7 +46,7 @@ public class Client_MainRun {
 				///////////////
 				_is = socket.getInputStream();
 				_serverData = new String(_bytes, 0, _is.read(_bytes));
-				System.out.println("¼­¹ö¿¡¼­ ¹ŞÀº °ª : " + _serverData);
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ : " + _serverData);
 			}while(!_clientData.equals("/q"));
 			
 			_is.close();
